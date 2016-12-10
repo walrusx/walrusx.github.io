@@ -1,0 +1,71 @@
+@import "normalize"
+
+#hero
+  background:
+    image: url("../img/hero.jpg")
+    position: center center
+    size: cover
+  height: 700px
+
+$red: #F60434
+
+
+#squares
+  background-color: #f5f5f5
+  padding: 14% 16%
+
+  .red
+    background-color: $red
+  .white
+    background-color: #fff
+
+  .img1
+    background:
+      image: url("../img/img1.jpg")
+      position: center center
+      size: cover
+  .img2
+    background:
+      image: url("../img/img2.jpg")
+      position: center center
+      size: cover
+
+  .sq1
+    float: left
+    height: 0
+    width: 33.3%
+    padding-bottom: 33.3%
+
+  .sq2
+    float: left
+    height: 0
+    width: 66.6%
+    padding-bottom: 33.3%
+
+@media (max-width: 800px)
+  #squares
+    padding: 8% 4%
+    .sq1
+      width: 50%
+      padding-bottom: 50%
+    .sq2
+      width: 50%
+      padding-bottom: 50%
+
+@media (max-width: 400px)
+  #squares
+    padding: 0%
+
+    .sq1
+      height: 0
+      width: 100%
+      padding-bottom: 100%
+
+    .sq2
+      height: 0
+      width: 100%
+      padding-bottom: 100%
+
+.clearfix
+  overflow: auto
+  zoom: 1
