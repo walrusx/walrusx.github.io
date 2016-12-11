@@ -1,4 +1,8 @@
 @import "normalize"
+@import url('https://fonts.googleapis.com/css?family=Lato:700')
+
+body
+  font-family: 'Lato', sans-serif
 
 #hero
   background:
@@ -9,59 +13,81 @@
 
 $red: #F60434
 
-
 #squares
   background-color: #f5f5f5
-  padding: 14% 16%
+  padding: 10%
 
   .red
     background-color: $red
+    color: #fff
   .white
     background-color: #fff
+    color: $red
+
+  .sq
+    position: relative
+    float: left
+    height: 0
+    overflow: hidden
+    background:
+      position: center center
+      size: cover
+
+    .text
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: 10
+
+      p
+        font-size: 2.2em
+        margin: 0
+
+      .date
+        text-align: center
+        font-size: 1.4em
+        span
+          font-size: 4.8em
+    svg
+      position: absolute
+      z-index: 5
+
+  .row1
+    width: 33.333%
+    padding-bottom: 33.333%
+  .row2
+    width: 66.666%
+    padding-bottom: 33.333%
 
   .img1
-    background:
-      image: url("../img/img1.jpg")
-      position: center center
-      size: cover
+    background-image: url("../img/img1.jpg")
   .img2
+    background-image: url("../img/img2.jpg")
+  .img3
     background:
-      image: url("../img/img2.jpg")
-      position: center center
-      size: cover
-
-  .sq1
-    float: left
-    height: 0
-    width: 33.3%
-    padding-bottom: 33.3%
-
-  .sq2
-    float: left
-    height: 0
-    width: 66.6%
-    padding-bottom: 33.3%
+      image: url("../img/img3.jpg")
+      position: left bottom
+  .map
+    background-image: url("../img/map.jpg")
 
 @media (max-width: 800px)
+  #hero
+    height: 600px
+
   #squares
     padding: 8% 4%
-    .sq1
-      width: 50%
-      padding-bottom: 50%
-    .sq2
+    .row1, .row2
       width: 50%
       padding-bottom: 50%
 
 @media (max-width: 400px)
+  #hero
+    height: 100vh
+
   #squares
     padding: 0%
-
-    .sq1
-      height: 0
-      width: 100%
-      padding-bottom: 100%
-
-    .sq2
+    .row1, .row2
       height: 0
       width: 100%
       padding-bottom: 100%
