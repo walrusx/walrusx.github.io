@@ -35,20 +35,27 @@ $red: #F60434
 
     .text
       position: absolute
+      width: 70%
       top: 50%
       left: 50%
       transform: translate(-50%, -50%)
       z-index: 10
 
       p
-        font-size: 2.2em
+        font-size: 2.4em
         margin: 0
 
       .date
         text-align: center
+        font-size: 1.5em
+        span
+          font-size: 4.9em
+      .dir
+        text-align: center
         font-size: 1.4em
         span
-          font-size: 4.8em
+          text-align: center
+          font-size: 2em
     svg
       position: absolute
       z-index: 5
@@ -71,7 +78,7 @@ $red: #F60434
   .map
     background-image: url("../img/map.jpg")
 
-@media (max-width: 800px)
+@media (max-width: 900px)
   #hero
     height: 600px
 
@@ -81,7 +88,7 @@ $red: #F60434
       width: 50%
       padding-bottom: 50%
 
-@media (max-width: 400px)
+@media (max-width: 500px)
   #hero
     height: 100vh
 
