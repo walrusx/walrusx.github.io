@@ -16,13 +16,14 @@ Version: 1.0
   background-color: #000;
   overflow: hidden;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .star-wars-intro p.intro-text {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 2em;
   font-weight: 400;
   color: #4ee;
@@ -69,7 +70,7 @@ Version: 1.0
   position: absolute;
   top: 100%;
   animation: scroll 140s linear 4s forwards;
-  animation-delay: 11s;
+  animation-delay: 12s;
 }
 
 .star-wars-intro .title-content > .content-header {
@@ -80,8 +81,12 @@ Version: 1.0
 
 .star-wars-intro .main-logo {
   position: absolute;
-  font-size: 14em;
+  top: 50%;
+  left: 50%;
+  transform-origin: top left;
+  transform: translate(-50%, -50%);
   text-align: center;
+  font-size: 14em;
   line-height: 0.8em;
   letter-spacing: -0.05em;
   color: #000;
@@ -90,10 +95,6 @@ Version: 1.0
   z-index: 1;
   animation: logo 8s ease-out 2.5s;
   animation-delay: 6s;
-}
-
-.star-wars-intro .main-logo > img {
-  max-width: 100%;
 }
 
 @keyframes intro {
@@ -108,9 +109,9 @@ Version: 1.0
 }
 
 @keyframes logo {
-  0% { transform: scale(1); opacity: 1; }
+  0% { transform: scale(1) translate(-50%, -50%); opacity: 1; }
   50% { opacity: 1; }
-  100% { transform: scale(0.1); opacity: 0; }
+  100% { transform: scale(0.1) translate(-50%, -50%); opacity: 0; }
 }
 
 @keyframes scroll {
@@ -124,5 +125,9 @@ Version: 1.0
   }
   .star-wars-intro .main-content span {
     font-size: 34px;
+  }
+  .star-wars-intro .title-content {
+    animation: scroll 100s linear 4s forwards;
+    animation-delay: 12s;
   }
 }
