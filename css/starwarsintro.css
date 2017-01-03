@@ -24,7 +24,7 @@ Version: 1.0
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2em;
+  font-size: 3em;
   font-weight: 400;
   color: #4ee;
   opacity: 0;
@@ -34,23 +34,26 @@ Version: 1.0
 }
 
 .star-wars-bg {
-  background: url("../img/bg.jpg") center center;
+  background: url("../img/bg.jpg");
+  background-size: cover;
 }
 
 .star-wars-intro .main-content {
-  margin: auto;
+  margin: 0 auto;
   position: absolute;
   z-index: 3;
   width: 98%;
   max-width: 1400px;
   height: 40em;
   bottom: 0;
+  right: 0;
+  left: 0;
   font-size: 64px;
   font-weight: bold;
   text-align: justify;
   overflow: hidden;
   transform-origin: 50% 100%;
-  transform: perspective(350px) rotateX(25deg);
+  transform: perspective(400px) rotateX(25deg);
 }
 
 .star-wars-intro .main-content span {
@@ -86,7 +89,7 @@ Version: 1.0
   transform-origin: top left;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 14em;
+  font-size: 18em;
   line-height: 0.8em;
   letter-spacing: -0.05em;
   color: #000;
@@ -117,6 +120,12 @@ Version: 1.0
 @keyframes scroll {
   0% { top: 100%; }
   100% { top: -170%; }
+}
+
+@media screen and (max-width: 1400px) {
+  .star-wars-intro p.intro-text {
+    font-size: 2em;
+  }
 }
 
 @media screen and (max-width: 720px) {
