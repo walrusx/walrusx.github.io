@@ -8,8 +8,8 @@
 </head>
 <body>
 
-  <audio id="audio" autobuffer="autobuffer">
-    <source src="audio/star-wars.m4a" type="audio/mpeg">
+  <audio id="audio">
+    <source src="audio/star-wars.mp3" type="audio/mpeg">
   </audio>
 
   <div id="start">
@@ -39,7 +39,15 @@
     </div>
   </div>
 
-  <div id="squares" class="clearfix hide">
+  <div id="squares" class="clearfix">
+    <div class="sq row3 map">
+
+    </div>
+    <div class="sq row4 black">
+      <div class="text years center">
+        <p>Y varios años después...</p>
+      </div>
+    </div>
     <div class="sq row3 img0">
       <div class="hero">
         <h1>NOS<br>CASAMOS</h1>
@@ -56,7 +64,7 @@
         <h2>19:00</h2>
         <p>Nuestra Señora del Perpetuo Socorro</p>
         <h3>Bv. Liniers 1100, Pergamino</h3>
-        <a href="https://goo.gl/maps/JrFBTmHqPiR2" target="_blank"><div class="btn red">MAPA</div></a>
+        <a href="https://goo.gl/maps/PHqQ3otC3hw" target="_blank"><div class="btn red">MAPA</div></a>
       </div>
     </div>
     <div class="sq row2 white">
@@ -65,7 +73,7 @@
         <h2>21:00</h2>
         <p>Los Lagartos Club de Tenis</p>
         <h3>Estrada e Intendente Biscayart, Pergamino</h3>
-        <a href="https://goo.gl/maps/JrFBTmHqPiR2" target="_blank"><div class="btn red">MAPA</div></a>
+        <a href="https://goo.gl/maps/vgLBnSiacaE2" target="_blank"><div class="btn red">MAPA</div></a>
       </div>
     </div>
     <div class="sq row2 img3"></div>
@@ -75,21 +83,24 @@
         <span>HOTELES</span>
       </div>
     </div>
-    <div class="sq row3 map"></div>
     <div class="sq row2 img4"></div>
     <div class="sq row2 white">
-      <div class="text dir">
-        <span>REGALO</span>
+      <div class="text regalo">
+        <span>REGALO DE BODAS</span>
+        <p>Una Ferrari, una Mansión, un collar de diamante...<br>Sino, podes ayudarnos con nuestra luna de miel.</p>
+        <h3><span>Banco:</span>Citi</h3>
+        <h3><span>Caja de Ahorro:</span>52559131171</h3>
+        <h3>CBU: 0167777100052559131171</h3>
       </div>
     </div>
     <div class="sq row2 black">
       <div class="text info">
         <span>SOLO ADULTOS</span>
         <p>Para garantizar la diversión de los adultos, el Imperio no admite niños en la fiesta.</p>
-        <span>VESTIMENTA</span>
-        <p>As you wish, Lord Vader.</p>
+        <span>CODIGO DE VESTIMENTA</span>
+        <p>Zapatillas y algo más...</p>
         <div class="center">
-          <a href="https://goo.gl/maps/JrFBTmHqPiR2" target="_blank"><div class="btn yellow">CONFIRMA</div></a>
+          <a href="https://goo.gl/maps/JrFBTmHqPiR2" target="_blank"><div class="btn yellow">CONFIRMA TU PRESENCIA</div></a>
         </div>
       </div>
     </div>
@@ -102,12 +113,12 @@
   document.getElementById('start').addEventListener("click", function(){
     document.getElementById('start').classList.add('hide');
     document.getElementById('sw').classList.add('star-wars-intro');
+    document.getElementById('squares').classList.remove('hide');
     setTimeout("document.getElementById('audio').play()", 6000);
     setTimeout("document.getElementById('sw').classList.add('star-wars-bg');", 6000);
-    setTimeout("document.getElementById('squares').classList.remove('hide');", 6000);
   });
 
   window.sr = ScrollReveal();
-  sr.reveal('.sq', { duration: 700, distance: '50px', viewFactor: 0.6, easing: 'ease',});
+  sr.reveal('.sq', { duration: 700, distance: '50px', viewFactor: 0.5, easing: 'ease',});
 </script>
 </html>
