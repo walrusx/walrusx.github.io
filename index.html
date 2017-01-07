@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Agustin y Pamela</title>
+  <title>Agustin &amp; Pamela</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no">
+  <script src="js/pace.min.js"></script>
   <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
@@ -13,6 +14,8 @@
   </audio>
 
   <div id="start">
+    <div id="load" class="v-center">CARGANDO</div>
+    <div id="play" class="v-center hide"></div>
   </div>
 
   <div id="sw">
@@ -25,12 +28,12 @@
         <p class="content-header">EPISODIO I<br/><span>EL ENCUENTRO</span></p>
         <br>
         <p class="content-body">
-          Luego de un periodo de descontento social. Saqueos, manifestaciones y
-          cacerolazos invadieron las calles. La gente aun cobra sus sueldos en Patacones o Lecops.
+          Luego de un período de descontento social. Saqueos, manifestaciones y
+          cacerolazos invadieron las calles. La gente aún cobra sus sueldos en Patacones o Lecops.
           <br><br>
-          Durante la noche de Año Nuevo miles de personas se reunen para celebrar en Avenida Roca.
+          Durante la noche de Año Nuevo miles de personas se reúnen para celebrar en Avenida Roca.
           <br><br>
-          Empujados por sus amigos y pese a las bajas probabilidades, dos jovenes salen a buscarse...
+          Empujados por sus amigos y pese a las bajas probabilidades, dos jóvenes salen a buscarse...
         </p>
       </div>
     </div>
@@ -39,13 +42,23 @@
     </div>
   </div>
 
-  <div id="squares" class="clearfix">
-    <div class="sq row3 map">
+  <div id="photos" class="hide">
+    <img src="img/hero-01.jpg" alt="Pame &amp; Agus" class="img-scroll">
+    <img src="img/hero-02.jpg" alt="Pame &amp; Agus" class="img-scroll">
+    <img src="img/hero-03.jpg" alt="Pame &amp; Agus" class="img-scroll">
+    <img src="img/hero-04.jpg" alt="Pame &amp; Agus" class="img-scroll">
+    <img src="img/hero-05.jpg" alt="Pame &amp; Agus" class="img-scroll">
+    <img src="img/hero-06.jpg" alt="Pame &amp; Agus" class="img-scroll">
+    <img src="img/hero-07.jpg" alt="Pame &amp; Agus" class="img-scroll">
+    <img src="img/hero-08.jpg" alt="Pame &amp; Agus" class="img-scroll">
+    <img src="img/hero-09.jpg" alt="Pame &amp; Agus" class="img-scroll">
+    <img src="img/hero-10.jpg" alt="Pame &amp; Agus" class="img-scroll">
+  </div>
 
-    </div>
+  <div id="squares" class="clearfix hide">
     <div class="sq row4 black">
       <div class="text years center">
-        <p>Y varios años después...</p>
+        <p>Varios años después...</p>
       </div>
     </div>
     <div class="sq row3 img0">
@@ -61,36 +74,49 @@
     <div class="sq row2 white">
       <div class="text dir">
         <span>IGLESIA</span>
-        <h2>19:00</h2>
+        <h2>18:00</h2>
         <p>Nuestra Señora del Perpetuo Socorro</p>
         <h3>Bv. Liniers 1100, Pergamino</h3>
-        <a href="https://goo.gl/maps/PHqQ3otC3hw" target="_blank"><div class="btn red">MAPA</div></a>
+        <a href="https://goo.gl/maps/PHqQ3otC3hw" target="_blank"><div class="btn">MAPA</div></a>
       </div>
     </div>
     <div class="sq row2 white">
       <div class="text dir">
         <span>SALON</span>
-        <h2>21:00</h2>
+        <h2>19:00</h2>
         <p>Los Lagartos Club de Tenis</p>
         <h3>Estrada e Intendente Biscayart, Pergamino</h3>
-        <a href="https://goo.gl/maps/vgLBnSiacaE2" target="_blank"><div class="btn red">MAPA</div></a>
+        <a href="https://goo.gl/maps/vgLBnSiacaE2" target="_blank"><div class="btn">MAPA</div></a>
       </div>
     </div>
     <div class="sq row2 img3"></div>
-    <div class="sq row2 img5"></div>
-    <div class="sq row2 red">
-      <div class="text dir">
-        <span>HOTELES</span>
-      </div>
-    </div>
     <div class="sq row2 img4"></div>
     <div class="sq row2 white">
       <div class="text regalo">
         <span>REGALO DE BODAS</span>
-        <p>Una Ferrari, una Mansión, un collar de diamante...<br>Sino, podes ayudarnos con nuestra luna de miel.</p>
-        <h3><span>Banco:</span>Citi</h3>
-        <h3><span>Caja de Ahorro:</span>52559131171</h3>
-        <h3>CBU: 0167777100052559131171</h3>
+        <p>Una Ferrari, una Mansión, un collar de diamante. Sino, podes ayudarnos con nuestra luna de miel.</p>
+        <div class="text-pad">
+          <h4>BANCO</h4>
+          <h3>Citi</h3>
+          <h4>CAJA DE AHORRO</h4>
+          <h3>52559131171</h3>
+          <h4>CBU</h4>
+          <h3>0167777100052559131171</h3>
+        </div>
+      </div>
+    </div>
+    <div class="sq row2 img5"></div>
+    <div class="sq row2 red">
+      <div class="text regalo">
+        <span>HOSPEDAJE EN PERGAMINO</span>
+        <div class="text-pad">
+          <h4>HOTEL AMERICANO</h4>
+          <h3>Merced 418, Pergamino<br>(02477) 424868<br><a href="http://www.hotel-americano.com.ar" target="_blank">www.hotel-americano.com.ar</a></h3>
+          <h4>HOTEL SIMOCA</h4>
+          <h3>Estrada 61, Pergamino<br>(02477) 418687<br><a href="https://www.facebook.com/hotelsimoca.sa/" target="_blank">www.hotelsimoca.com.ar</a></h3>
+          <h4>HOTEL RAICES</h4>
+          <h3>San Nicolas 334, Pergamino<br>(02477) 445092<br><a href="http://www.raiceshotelpergamino.com" target="_blank">www.raiceshotelpergamino.com</a></h3>
+        </div>
       </div>
     </div>
     <div class="sq row2 black">
@@ -100,7 +126,7 @@
         <span>CODIGO DE VESTIMENTA</span>
         <p>Zapatillas y algo más...</p>
         <div class="center">
-          <a href="https://goo.gl/maps/JrFBTmHqPiR2" target="_blank"><div class="btn yellow">CONFIRMA TU PRESENCIA</div></a>
+          <a href="https://docs.google.com/forms/d/10o8eN4RRJcQVKYFvylZIe_NJAdmZOBrNbMNgzorl9wQ/" target="_blank"><div class="btn">CONFIRMA TU PRESENCIA</div></a>
         </div>
       </div>
     </div>
@@ -110,17 +136,32 @@
 
 <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
 <script type="text/javascript">
-  document.getElementById('start').addEventListener("click", function(){
-    document.getElementById('start').classList.add('hide');
-    document.getElementById('sw').classList.add('star-wars-intro');
-    document.getElementById('squares').classList.remove('hide');
-    document.getElementById('audio').play();
-    document.getElementById('audio').pause();
-    setTimeout( function(){ document.getElementById('audio').play() } , 6000);
-    setTimeout( function(){ document.getElementById('sw').classList.add('star-wars-bg') }, 6000);
+  Pace.on('done', function(){
+    var divStart = document.getElementById('start'),
+        divLoad = document.getElementById('load'),
+        divPlay = document.getElementById('play'),
+        divSW = document.getElementById('sw'),
+        divPhotos = document.getElementById('photos'),
+        divSquares = document.getElementById('squares'),
+        audioSW = document.getElementById('audio');
+
+    divLoad.classList.add('hide');
+    divPlay.classList.remove('hide');
+
+    divStart.addEventListener("click", function(){
+      divStart.classList.add('hide');
+      divSW.classList.add('star-wars-intro');
+      divPhotos.classList.remove('hide');
+      divSquares.classList.remove('hide');
+      audioSW.play();
+      audioSW.pause();
+      setTimeout( function(){ audioSW.play() } , 6000);
+      setTimeout( function(){ divSW.classList.add('star-wars-bg') }, 5900);
+    });
   });
 
   window.sr = ScrollReveal();
-  sr.reveal('.sq', { duration: 700, distance: '50px', viewFactor: 0.5, easing: 'ease',});
+  sr.reveal('.sq', { duration: 700, distance: '50px', viewFactor: 0.5, easing: 'ease'});
+  sr.reveal('.img-scroll', { duration: 700, distance: '50px', viewFactor: 0.8, easing: 'ease'});
 </script>
 </html>

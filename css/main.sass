@@ -12,6 +12,21 @@ body
 $red: #F60434
 $yellow: #EBD71C
 
+.pace
+  pointer-events: none
+  user-select: none
+  .pace-progress
+    background: $yellow
+    position: fixed
+    z-index: 2000
+    top: 0
+    right: 100%
+    width: 100%
+    height: 6px
+
+.pace-inactive
+  display: none
+
 #start
   position: fixed
   top: 0
@@ -21,6 +36,30 @@ $yellow: #EBD71C
   background: #000
   color: $yellow
   z-index: 200
+
+  .v-center
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+  #load
+    font-size: 2em
+    animation: loading 2s infinite
+
+  #play
+    width: 0
+    height: 0
+    border-top: 40px solid transparent
+    border-left: 60px solid $yellow
+    border-bottom: 40px solid transparent
+    &:hover
+      cursor: pointer
+
+@keyframes loading
+  0% { opacity: 0 }
+  50% { opacity: 1 }
+  100% { opacity: 0 }
 
 .hide
   display: none
@@ -56,12 +95,21 @@ a
   display: inline-block
   margin: 2em auto 0 auto
   padding: 0.5em 3em
-  border-radius: 3px
+  border-radius: 13px
+  border: 2px solid
   transition: all 0.4s
-  box-shadow: 0 0 6px rgba(0, 0, 0, .4)
   &:hover
-    box-shadow: 0 0 10px rgba(0, 0, 0, .6)
     cursor: pointer
+
+#photos
+  width: 100%
+  padding: 4% 0
+  text-align: center
+  img
+    width: 18.6%
+    height: auto
+    margin: 0.4%
+    border-radius: 3px
 
 #squares
   overflow: hidden
@@ -81,15 +129,24 @@ a
     span
       background-color: $red
       color: #fff
+    .btn
+      border-color: $red
+      background: #fff
+      &:hover
+        background-color: $red
+        color: #fff
   .black
     background-color: #000
-    color: #EBD71C
+    color: $yellow
     span
       background-color: $red
       color: #fff
-  .yellow
-    background-color: #EBD71C
-    color: #000
+    .btn
+      border-color: $yellow
+      background: #000
+      &:hover
+        background-color: $yellow
+        color: #000
 
   .sq
     position: relative
@@ -149,22 +206,30 @@ a
         font-size: 1em
         margin: 0
       p
-        margin: 0.6em 0 0.3em 0
+        margin: 0.6em 0 0.2em 0
+
     .regalo
+      text-align: left
       p
         font-size: 1.2em
-        margin: 1.6em 0 1.6em 0
+        margin: 1.4em 0 0 0
       h3
-        text-align: left
-        margin: 0 3em
-        position: relative
-        span
-          position: absolute
-          text-align: right
-          background: inherit
-          color: #555
-          left: -70px
-          top: -3px
+        font-size: 0.9em
+        margin: 0 0 0 0.5em
+        line-height: 1.2
+      h4
+        display: inline-block
+        padding: 0.3em 0.6em
+        margin: 1.4em 0 0.5em 0
+        background: #333
+        font-size: 0.6em
+        color: #fff
+      .text-pad
+        margin: 1em 0 0 0.8em
+        a
+          &:hover
+            text-decoration: underline
+
     .info
       text-align: left
     .center
@@ -189,10 +254,6 @@ a
 
   .img0
     background-image: url("../img/img0.jpg")
-  .img1
-    background-image: url("../img/img1.jpg")
-  .img2
-    background-image: url("../img/img2.jpg")
   .img3
     background:
       image: url("../img/img3.jpg")
@@ -201,8 +262,6 @@ a
     background-image: url("../img/img4.jpg")
   .img5
     background-image: url("../img/img5.jpg")
-  .map
-    background-image: url("../img/map.jpg")
   .img-info
     background:
       image: url("../img/info.jpg")
@@ -217,6 +276,11 @@ a
         margin-top: 0
 
 @media (max-width: 600px)
+  #photos
+    img
+      width: 46%
+      height: auto
+      margin: 0.4%
   #squares
     .row2, .row3
       height: 420px
