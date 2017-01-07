@@ -139,7 +139,7 @@ a
     background-color: #000
     color: $yellow
     span
-      background-color: $red
+      border: 2px solid $red
       color: #fff
     .btn
       border-color: $yellow
@@ -209,22 +209,49 @@ a
         margin: 0.6em 0 0.2em 0
 
     .regalo
-      text-align: left
+      p
+        font-size: 1.2em
+        margin: 1.6em 0 2em 0
+      h3
+        display: inline-block
+        text-align: left
+        width: 60%
+        font-size: 0.9em
+        margin: 0.4em 0 0 0
+      h4
+        display: inline-block
+        text-align: right
+        padding-right: 1em
+        width: 30%
+        font-size: 0.6em
+        margin: 0
+        color: #444
+      .span-r
+        border: 2px solid $red
+        background-color: inherit
+        color: inherit
+      .text-pad
+        margin: 1.6em 0 0 0
+        a
+          &:hover
+            text-decoration: underline
+
+    .hoteles
       p
         font-size: 1.2em
         margin: 1.4em 0 0 0
       h3
-        font-size: 0.9em
-        margin: 0 0 0 0.5em
+        font-size: 0.8em
+        margin: 0 0 0 0.7em
         line-height: 1.2
       h4
         display: inline-block
-        padding: 0.3em 0.6em
+        padding: 0.4em 0.6em
         margin: 1.4em 0 0.5em 0
-        background: #333
-        font-size: 0.6em
-        color: #fff
+        border: 2px solid #fff
+        font-size: 0.7em
       .text-pad
+        text-align: left
         margin: 1em 0 0 0.8em
         a
           &:hover
